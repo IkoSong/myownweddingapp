@@ -1,0 +1,15 @@
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 100vh;
+}
+.inv {
+  width: 572rpx;
+  height: 69rpx;
+  position: fixed;
+  top: 30rpx;
+  left: 89rpx;
+  z-index: 99;
+}

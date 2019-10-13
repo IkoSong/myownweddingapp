@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/map/index",
+    "pages/invitation/index",
+    "pages/photos/index",
+    "pages/bless/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "缘定三生❤",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "#ff4c91",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "邀请函"
+      },
+      {
+        "pagePath": "pages/map/index",
+        "text": "日期"
+      },
+      {
+        "pagePath": "pages/invitation/index",
+        "iconPath": "images/tabbar/3-1.png",
+        "selectedIconPath": "images/tabbar/3-1.png",
+        "text": "  "
+      },
+      {
+        "pagePath": "pages/photos/index",
+        "text": "相册"
+      },
+      {
+        "pagePath": "pages/bless/index",
+        "text": "祝福"
+      }
+    ]
+  }
+}

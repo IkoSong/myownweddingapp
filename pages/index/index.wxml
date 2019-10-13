@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container">
+  <image src='/images/index/inv.png' class='inv'></image>
+  <image src='/images/index/bgEg.png' class='cover' mode='aspectFill'></image>
+  <view class='datetime' animation="{{animationData}}">
+    <view class='box'>
+      <view class="name css13610f7ae66601">
+        <span class="fl">宋林晖</span>
+        <span class="and">❤️</span>
+        <span class="fr ">石雪吟</span>
+      </view>
+      <view class="date css13610f7ae66601">
+        <view>谨定于 {{mainInfo.date}}</view>
+        <view>农历 {{mainInfo.lunar}} 举办婚礼</view>
+        <view>地址: {{mainInfo.address}}</view>
+        <view>席设: {{mainInfo.hotel}}</view>
+        <view>恭请您的光临</view>
+      </view>
+      <image class="we" src='/images/we.png'></image>
+    </view>
+  </view>
+</view>
