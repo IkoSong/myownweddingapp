@@ -1,3 +1,6 @@
+.container {
+  min-height: 100vh;
+}
 .cover {
   position: fixed;
   top: 0;
@@ -5,11 +8,72 @@
   width: 750rpx;
   height: 100vh;
 }
-.inv {
-  width: 572rpx;
-  height: 69rpx;
-  position: fixed;
-  top: 30rpx;
-  left: 89rpx;
+.we {
+  position: absolute;
+  left: 40rpx;
+  width: 520rpx;
+  height: 400rpx;
   z-index: 99;
+}
+.callimg{
+  width: 85rpx;
+  height: 85rpx;
+}
+.call{
+  position: absolute;
+  bottom:60rpx; 
+  color:rgb(245, 212, 158);
+  letter-spacing: 6rpx;
+  font-size: 80%;
+  font-family: "Microsoft YaHei"
+}
+.name{
+  color:rgb(245, 212, 158);
+  letter-spacing: 8rpx;
+  font-size: 110%;
+  font-family: "Microsoft YaHei"
+}
+.he{
+  position: absolute;
+  left: 170rpx;
+  bottom: 350rpx;
+  width: 140rpx;
+  height: 158rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 99;
+}
+.she{
+position: absolute;
+  right: 170rpx;
+  bottom: 350rpx;
+  width: 140rpx;
+  height: 158rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 99;
+}
+.invtArea{
+  position: absolute;
+  left:115rpx;
+  bottom:60rpx;
+  width:550rpx;
+  height: 250rpx;
+}
+.invt {
+  color:white;
+  font-size: 85%;
+  line-height: 200%;
+  font-family: "Microsoft YaHei";
+}
+.msgbody{
+  line-height: 200%;
+  color:white;
+  font-size: 85%;
+  text-indent:2em;
+  font-family: "Microsoft YaHei";
 }

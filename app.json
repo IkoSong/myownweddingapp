@@ -10,7 +10,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "缘定三生❤",
+    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
@@ -22,24 +22,32 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "邀请函"
+        "iconPath": "images/tabbar/yaoqing.png",
+        "selectedIconPath": "images/tabbar/yaoqing2.png",
+        "text": "邀请"
       },
       {
         "pagePath": "pages/map/index",
-        "text": "日期"
+        "iconPath": "images/tabbar/xinxi.png",
+        "selectedIconPath": "images/tabbar/xinxi2.png",
+        "text": "信息"
       },
       {
         "pagePath": "pages/invitation/index",
-        "iconPath": "images/tabbar/3-1.png",
-        "selectedIconPath": "images/tabbar/3-1.png",
-        "text": "  "
+        "iconPath": "images/tabbar/+.png",
+        "selectedIconPath": "images/tabbar/x.png",
+        "text": " "
       },
       {
         "pagePath": "pages/photos/index",
+        "iconPath": "images/tabbar/xiangce.png",
+        "selectedIconPath": "images/tabbar/xiangce2.png",
         "text": "相册"
       },
       {
         "pagePath": "pages/bless/index",
+        "iconPath": "images/tabbar/zhufu.png",
+        "selectedIconPath": "images/tabbar/zhufu2.png",
         "text": "祝福"
       }
     ]
