@@ -1,23 +1,26 @@
 <!--index.wxml-->
 <view class="container">
-    <image src='/images/index/bg.png' class='cover' mode='aspectFill'></image>
+    <image src='/images/index/di.png' class='cover' mode='aspectFill'></image>
+    <image src='/images/index/xi.png' class='xi'></image>
+    <image src='/images/index/s.png' class="love"></image>
     <view class="he" bindtap="callhe">
-      <image src='/images/index/he.png' class="callimg"></image>
-      <view class="call">呼叫新郎</view>
-      <view class="name">宋林晖</view>
+        <image src='/images/index/he.png' class="callimg"></image>
+        <view class="call">呼叫新郎</view>
+        <view class="name">宋林晖</view>
     </view>
-     <view class="she" bindtap="callshe">
-      <image src='/images/index/she.png' class="callimg"></image>
-      <view class="call">呼叫新娘</view>
-      <view class="name">石雪吟</view>
+    <view class="she" bindtap="callshe">
+        <image src='/images/index/she.png' class="callimg"></image>
+        <view class="call">呼叫新娘</view>
+        <view class="name">石雪吟</view>
     </view>
+    <image src="/images/index/kuang.png" class="invtArea"></image>
     <view class="invtArea">
-      <view class="invt">
-各位亲朋好友：
-      </view>
-      <view class="msgbody">
-      诚挚邀请您于2020年1月12日(星期日)参加宋林晖&石雪吟的结婚典礼。您的到来是对我们最好的祝福，敬备喜宴，恭请光临。
-      </view>
+        <view class="invt">
+            各位亲朋好友：
+        </view>
+        <view class="msgbody">
+            诚挚邀请您于2020年1月12日(星期日)参加宋林晖&石雪吟的结婚典礼。您的到来是对我们最好的祝福，敬备喜宴，恭请光临。
+        </view>
 
     </view>
 

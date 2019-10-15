@@ -7,6 +7,23 @@
   left: 0;
   width: 750rpx;
   height: 100vh;
+  z-index: -1;
+}
+.xi{
+  position: absolute;
+  width: 500rpx;
+  height: 500rpx;
+  bottom: 45vh;
+  left: 125rpx;
+  z-index: 99;
+}
+.love{
+  position: absolute;
+  width: 46rpx;
+  height: 46rpx;
+  left:352rpx;
+  bottom:36vh;
+  z-index: 99;
 }
 .we {
   position: absolute;
@@ -24,19 +41,19 @@
   bottom:60rpx; 
   color:rgb(245, 212, 158);
   letter-spacing: 6rpx;
-  font-size: 80%;
+  font-size: 70%;
   font-family: "Microsoft YaHei"
 }
 .name{
   color:rgb(245, 212, 158);
   letter-spacing: 8rpx;
-  font-size: 110%;
+  font-size: 100%;
   font-family: "Microsoft YaHei"
 }
 .he{
   position: absolute;
   left: 170rpx;
-  bottom: 350rpx;
+  bottom: 32vh;
   width: 140rpx;
   height: 158rpx;
   display: flex;
@@ -48,7 +65,7 @@
 .she{
 position: absolute;
   right: 170rpx;
-  bottom: 350rpx;
+  bottom: 32vh;
   width: 140rpx;
   height: 158rpx;
   display: flex;
@@ -59,21 +76,28 @@ position: absolute;
 }
 .invtArea{
   position: absolute;
-  left:115rpx;
-  bottom:60rpx;
+  left:100rpx;
+  bottom:15vw;
   width:550rpx;
-  height: 250rpx;
+  height: 20vh;
 }
 .invt {
+  position: absolute;
+  margin-left: 35rpx;
+  margin-top: 35rpx;
   color:white;
-  font-size: 85%;
-  line-height: 200%;
+  font-size: 75%;
+  line-height: 170%;
   font-family: "Microsoft YaHei";
 }
 .msgbody{
-  line-height: 200%;
+  position: absolute;
+  margin-top: 75rpx;
+  margin-left: 35rpx;
+  margin-right: 35rpx;
+  line-height: 170%;
   color:white;
-  font-size: 85%;
+  font-size: 75%;
   text-indent:2em;
   font-family: "Microsoft YaHei";
 }

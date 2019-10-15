@@ -10,13 +10,12 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#ccc",
-    "selectedColor": "#ff4c91",
+    "selectedColor": "#c10538",
     "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [

@@ -19,3 +19,20 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.swiper {
+   width: 750rpx;
+   height: 100vh;
+ }
+.swiper swiper{
+    width: 750rpx;
+    height: 100vh;
+}
+.swiper swiper-item{
+    width: 750rpx;
+    height: 100vh;
+}
+.swiper image{
+    width: 750rpx;
+    height: 100vh;
+}
