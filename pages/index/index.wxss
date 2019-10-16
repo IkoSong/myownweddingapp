@@ -11,10 +11,10 @@
 }
 .xi{
   position: absolute;
-  width: 500rpx;
-  height: 500rpx;
-  bottom: 45vh;
-  left: 125rpx;
+  width: 550rpx;
+  height: 550rpx;
+  bottom: 46vh;
+  left: 100rpx;
   z-index: 99;
 }
 .love{
@@ -22,7 +22,7 @@
   width: 46rpx;
   height: 46rpx;
   left:352rpx;
-  bottom:36vh;
+  bottom:40vh;
   z-index: 99;
 }
 .we {
@@ -53,7 +53,7 @@
 .he{
   position: absolute;
   left: 170rpx;
-  bottom: 32vh;
+  bottom: 34vh;
   width: 140rpx;
   height: 158rpx;
   display: flex;
@@ -65,7 +65,7 @@
 .she{
 position: absolute;
   right: 170rpx;
-  bottom: 32vh;
+  bottom: 34vh;
   width: 140rpx;
   height: 158rpx;
   display: flex;

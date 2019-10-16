@@ -34,8 +34,7 @@
       {
         "pagePath": "pages/invitation/index",
         "iconPath": "images/tabbar/+.png",
-        "selectedIconPath": "images/tabbar/x.png",
-        "text": " "
+        "selectedIconPath": "images/tabbar/x.png"
       },
       {
         "pagePath": "pages/photos/index",
