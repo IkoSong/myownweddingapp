@@ -1,21 +1,289 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* pages/chat/index.wxss */
+
+page {
+  padding-bottom: 150rpx;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
+.chat_list {
+  width: 630rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding: 30rpx;
+  min-height: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(190, 77, 43, 0.2);
+}
+
+.chat_face {
+  width: 100rpx;
+  height: 100rpx;
+  float: left;
+  margin-right: 30rpx;
+  margin-top: 30rpx;
+}
+
+.chat_face image {
+  width: 100rpx;
+  height: 100rpx;
   border-radius: 50%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.chat_words {
+  width: 500rpx;
+  float: left;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #999;
 }
 
-.usermotto {
-  margin-top: 200px;
+.chat_meta {
+  width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+
+.chat_user {
+  display: inline-block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #666;
+}
+
+.chat_date {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.splitline{
+    position: absolute;
+    bottom: 35vh;
+    left:25rpx;
+    width: 700rpx;    /* 分隔线的长度 */
+    margin: auto;
+    height: 2px;    /* 分隔线粗细 */
+    text-align: center;
+    font-size: 24rpx;
+    color: #f10f4c;
+    background: #f10f4c;
+}
+.splitline span{
+    position: relative;
+    top: -8px;
+    background: #fff;
+    padding: 0px 10px;
+}
+
+.send_ipt {
+  position: absolute;
+  width: 650rpx;
+  left: 50rpx;
+  bottom: 15vh;
+  font-size: 32rpx;
+  height: 15vh;
+  line-height: 60rpx;
+  background-color: #ececec;
+  border-radius: 10rpx;
+}
+.imgarea{
+  position: absolute;
+  top:5vh;
+  width: 80vw;
+  left: 10vw;
+  height: 10vh;
+  background-color: skyblue;
+}
+.comebtn{
+   position: absolute;
+   top: 20vh;
+  font-size: 80%;
+  left:5vw;
+  width: 90vw
+}
+.commingline{
+    position: absolute;
+    top: 5vh;
+    left:25rpx;
+    width: 700rpx;    /* 分隔线的长度 */
+    margin: auto;
+    height: 1px;    /* 分隔线粗细 */
+    text-align: center;
+    font-size: 24rpx;
+    color: #f10f4c;
+    background: #f10f4c;
+}
+.commingline span{
+    position: relative;
+    font-size: 80%;
+    top: -8px;
+    background: #fff;
+    padding: 0px 10px;
+}
+
+.name_ipt{
+   position: absolute;
+  width: 650rpx;
+  left: 50rpx;
+  bottom: 56vh;
+  font-size: 32rpx;
+  height: 6vh;
+  line-height: 60rpx;
+  background-color: #ececec;
+  border-radius: 10rpx;
+}
+.tel_ipt{
+   position: absolute;
+  width: 650rpx;
+  left: 50rpx;
+  bottom: 48vh;
+  font-size: 32rpx;
+  height: 6vh;
+  line-height: 60rpx;
+  background-color: #ececec;
+  border-radius: 10rpx;
+}
+.num_ipt{
+   position: absolute;
+  width: 650rpx;
+  left: 50rpx;
+  bottom: 40vh;
+  font-size: 32rpx;
+  height: 6vh;
+  line-height: 60rpx;
+  background-color: #ececec;
+  border-radius: 10rpx;
+}
+
+
+
+
+.send_btn {
+  position: absolute;
+  bottom: 2vh;
+  left:250rpx;
+  width: 250rpx;
+  height: 100rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
+  box-shadow: 0 10rpx 20rpx -6rpx rgba(238, 103, 97, 0.5);
+}
+
+.befirst {
+  width: 600rpx;
+  height: 450rpx;
+  margin: 0 auto;
+  min-height: 0;
+  overflow: hidden;
+  margin-top: 200rpx;
+}
+
+.befirst image {
+  width: 600rpx;
+  height: 450rpx;
+}
+
+.btn_area {
+  height: 100rpx;
+  overflow: hidden;
+  position: fixed;
+  bottom:10vh;
+  right: 50rpx;
+  width: 100rpx;
+  z-index: 99;
+}
+
+
+.send_msg {
+  width: 750rpx;
+  background-color: #fff;
+  height: 65vh;
+  position: fixed;
+  bottom: 8vh;
+  left: 0rpx;
+  border-radius: 30rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.imgbtn{
+  z-index: 99;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+.form-label {
+  min-height: 0;
+  overflow: hidden;
+  padding: 10rpx;
+  font-size: 32rpx;
+}
+
+.form-tit {
+  line-height: 60rpx;
+}
+
+.form-tit .must {
+  color: red;
+}
+
+.form-ipt {
+  color: #333;
+}
+
+.form-ipt .ipt {
+  height: 60rpx;
+  padding: 10rpx 20rpx;
+  line-height: 60rpx;
+  background-color: #f8f8f8;
+  border-radius: 5rpx;
+}
+
+.form-ipt .textarea {
+  height: 180rpx;
+  padding: 20rpx;
+  line-height: 60rpx;
+  background-color: #f8f8f8;
+  margin-bottom: 20rpx;
+}
+
+.radio-group {
+  line-height: 80rpx;
+}
+
+.radio {
+  /* margin-right: 50rpx; */
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+.form-btn {
+  text-align: center;
+}
+
+.wx-radio-input {
+  display: none;
+}
+
+
+.msg_top {
+  display: block;
+  width: 500rpx;
+  height: 177rpx;
+  margin: 0 auto;
+  margin-top: -130rpx;
+  margin-bottom: 10rpx;
+}
+
+.sign_top {
+  display: block;
+  width: 700rpx;
+  height: 79rpx;
+  margin: 0 auto;
+  margin-top: -50rpx;
+  margin-bottom: -20rpx;
 }

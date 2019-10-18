@@ -1,21 +1,64 @@
 /**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.dateArea{
+  position: absolute;
+  background-color: rgb(245, 212, 158);
+  border-radius:30rpx;
+  left: 70rpx;
+  top:13vh;
+  width:610rpx;
+  height:400rpx;  
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.mapArea{
+  position: absolute;
+  background:white;
+  border-top-left-radius:60rpx;
+  border-bottom-left-radius:30rpx;
+  border-bottom-right-radius:30rpx;
+  left: 70rpx;
+  top:29vh;
+  width:610rpx;
+  height:60vh;  
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.date{
+  position: absolute;
+  left:107rpx ;
+  top:5vh;
+  width:396rpx;
+  height: 77rpx;
+  z-index: 99;
 }
+.locat{
+  position: absolute;
+  left: 126rpx;
+  top:3vh;
+  width: 358rpx;
+  height: 71rpx;
 
-.usermotto {
-  margin-top: 200px;
+}
+.redtop{
+  position: absolute;
+  top: 11vh;
+  left:25rpx;
+  height: 5rpx;
+  background-color: #BD0820;
+  border-radius:10rpx;
+  width: 560rpx;
+}
+.redbottom{
+  position: absolute;
+  bottom: 3vh;
+  left:25rpx;
+  height: 5rpx;
+  background-color: #BD0820;
+  border-radius:10rpx;
+  width: 560rpx;
+}
+.mapdetail{
+  position: absolute;
+  border: 5rpx solid #BD0820;
+  top: 14vh;
+  left:25rpx;
+  height:40vh;
+  width: 560rpx;
+
 }

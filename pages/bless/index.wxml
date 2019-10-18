@@ -1,13 +1,99 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+ <image src='/images/index/di.png' class='cover' mode='aspectFill'></image>
+    <view wx:if="{{chatNum > 0}}">
+      <view class="chat_list" wx:for="{{chatList}}" wx:key="user">
+        <view class="chat_face">
+          <image src="{{item.face}}" />
+        </view>
+        <view class="chat_words">
+          <view class="chat_meta">
+            <text class="chat_user">{{item.nickname}} </text>
+            <text class="chat_date fr">{{item.createTime}}</text>
+          </view>
+          <view>{{item.words}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class="befirst">
+        <!-- <image src="/images/lovemail.gif" /> -->
+      </view>
+    </view>
+    <view class='btn_area'>
+      <image wx:if="{{!msgSta}}" src='/images/bless/bi.png' class="imgbtn" bindtap="leaveMsg"></image>
+      <image wx:if="{{msgSta}}" src='/images/bless/x.png' class="imgbtn" bindtap="cancelMsg"></image>
+    
+      <!-- <view class='msg_btn' bindtap='leaveMsg'>说</view> -->
+      <!-- <image src="/images/bless/bi.png" class="msg_btn"></image> -->
+      <!-- <view class='sign_btn' bindtap='signIn'>席</view> -->
+    </view>
+
+    <view class="send_msg" wx:if="{{msgSta}}">
+      <form bindsubmit="foo">
+      <view class="imgarea" wx:if="{{!come}}">这里缺张图片</view>
+      <button class="comebtn" type="warn" wx:if="{{!come}}" bindtap="comeWedding">如果您有时间前来婚礼现场，请点击此按钮以统计桌席</button>
+      <input class="name_ipt" wx:if="{{come}}" placeholder="请填写您的姓名" bindinput="nameInput" value="{{name}}"></input>
+       <input class="tel_ipt" wx:if="{{come}}" type="number" placeholder="请填写您的手机号码" bindinput="telInput" value="{{tel}}"></input>
+      <input class="num_ipt" wx:if="{{come}}" type="number" placeholder="请填写您的出席人数(无法前来可填0)" bindinput="numInput" value="{{num}}"></input>
+    
+     <view wx:if="{{come}}" class="splitline">
+    <span>以上信息均为后台统计，不会呈现在页面中</span>
+    </view>
+    <view wx:else class="splitline">
+    <span>献上祝福</span>
+    </view>
+      <textarea  placeholder="在这里输入您要说的话" class="send_ipt" bindinput="bindKeyInput" fixed="true" value="{{inputValue}}">
+      </textarea>
+        <button type="warn" form-type="submit" class="send_btn" wx:if="{{auth}}">发送</button>
+        <button type="warn" form-type="reset" class="send_btn" wx:else open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">发送</button>
+      </form>
+    </view>
+
+    <!-- <view class="send_msg" wx:if="{{signSta}}">
+      <form bindsubmit="formSubmit">
+        <view class='form-label'>
+          <view class='form-tit'>
+            <text class="must">*</text> 姓名</view>
+          <view class="form-ipt">
+            <input type="text" name="name" class='ipt' placeholder="怎么称呼您呢？" />
+          </view>
+        </view>
+        <view class='form-label'>
+          <view class='form-tit'>
+            <text class="must">*</text> 电话</view>
+          <view class="form-ipt">
+            <input type="number" name="tel" class='ipt' placeholder="请填写有效的手机号码" />
+          </view>
+        </view>
+        <view class='form-label'>
+          <view class='form-tit'>几人出席</view>
+          <view class="form-ipt">
+            <radio-group class="radio-group" name="plan">
+              <label class="radio">
+                <radio class='ws-checkbox' value="自己一人" checked="checked" />自己一人
+              </label>
+              <label class="radio">
+                <radio class='ws-checkbox' value="两人出席" checked="" />两人出席
+              </label>
+              <label class="radio">
+                <radio class='ws-checkbox' value="三人出席" checked="" />三人出席
+              </label>
+              <label class="radio">
+                <radio class='ws-checkbox' value="三人以上" checked="" />三人以上
+              </label>
+            </radio-group>
+          </view>
+        </view>
+        <view class='form-label'>
+          <view class='form-tit'>备注</view>
+          <view class="form-ipt">
+            <textarea class='textarea' name="extra" placeholder="请填写您的备注需求" fixed="true" />
+          </view>
+        </view>
+        <button type="primary" class="send_btn" form-type="submit" wx:if="{{auth}}">确定提交</button>
+        <button type="primary" class="send_btn" wx:else open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">确定提交</button>
+        <view class='cancel_msg' bindtap='cancelMsg'>取消</view>
+      </form>
+    </view> -->
 </view>
