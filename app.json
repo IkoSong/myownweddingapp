@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/bless/index",
+   
     "pages/index/index",
     "pages/map/index",
     "pages/invitation/index",
-    "pages/photos/index"
+    "pages/photos/index",
+    "pages/bless/index"
     
   ],
   "window": {

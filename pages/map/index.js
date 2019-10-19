@@ -37,8 +37,8 @@ Page({
         id: 0,
         latitude: lat, // 页面初始化 options为页面跳转所带来的参数 
         longitude: lng,
-        width: 50,
-        height: 50
+        width: 22,
+        height: 31
       }],
     });
   },

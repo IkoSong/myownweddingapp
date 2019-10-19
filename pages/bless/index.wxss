@@ -62,9 +62,9 @@ page {
     position: absolute;
     bottom: 35vh;
     left:25rpx;
-    width: 700rpx;    /* 分隔线的长度 */
+    width: 670rpx;    /* 分隔线的长度 */
     margin: auto;
-    height: 2px;    /* 分隔线粗细 */
+    height: 1px;    /* 分隔线粗细 */
     text-align: center;
     font-size: 24rpx;
     color: #f10f4c;
@@ -79,8 +79,8 @@ page {
 
 .send_ipt {
   position: absolute;
-  width: 650rpx;
-  left: 50rpx;
+  width: 670rpx;
+  left: 25rpx;
   bottom: 15vh;
   font-size: 32rpx;
   height: 15vh;
@@ -91,17 +91,42 @@ page {
 .imgarea{
   position: absolute;
   top:5vh;
-  width: 80vw;
-  left: 10vw;
-  height: 10vh;
-  background-color: skyblue;
+  width: 202rpx;
+  left: 2vw;
+  height: 162rpx;
+}
+.arrowimg{
+  position: absolute;
+  top: 120rpx;
+  right:20rpx;
+  height: 55rpx;
+  width: 117rpx;
 }
 .comebtn{
-   position: absolute;
-   top: 20vh;
-  font-size: 80%;
-  left:5vw;
-  width: 90vw
+  position: absolute;
+  top: 10vh;
+  right:40rpx;
+  height: 100rpx;
+  width: 60vw;
+  float: right;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 90%;
+  text-align: center;
+  background-color: #f10f4c;
+  border-radius: 50rpx;
+  box-shadow:0px 1px 5px 2px #dee1e2;
+}
+.comebtn_son{
+  position: absolute;
+  left: 0;
+  top:10rpx;
+  line-height: 40rpx;
+  height: 100rpx;
+  width: 60vw;
+display: inline-block;
+vertical-align: middle;
+text-align: center;
 }
 .commingline{
     position: absolute;
@@ -125,8 +150,8 @@ page {
 
 .name_ipt{
    position: absolute;
-  width: 650rpx;
-  left: 50rpx;
+  width: 670rpx;
+  left: 25rpx;
   bottom: 56vh;
   font-size: 32rpx;
   height: 6vh;
@@ -136,8 +161,8 @@ page {
 }
 .tel_ipt{
    position: absolute;
-  width: 650rpx;
-  left: 50rpx;
+  width: 670rpx;
+  left: 25rpx;
   bottom: 48vh;
   font-size: 32rpx;
   height: 6vh;
@@ -147,8 +172,8 @@ page {
 }
 .num_ipt{
    position: absolute;
-  width: 650rpx;
-  left: 50rpx;
+  width: 670rpx;
+  left: 25rpx;
   bottom: 40vh;
   font-size: 32rpx;
   height: 6vh;
@@ -163,13 +188,26 @@ page {
 .send_btn {
   position: absolute;
   bottom: 2vh;
-  left:250rpx;
-  width: 250rpx;
+  left:375rpx;
+  width: 320rpx;
   height: 100rpx;
   font-size: 36rpx;
   line-height: 100rpx;
-  background-image: linear-gradient(135deg, #feb692 0%, #ea5455 100%);
-  box-shadow: 0 10rpx 20rpx -6rpx rgba(238, 103, 97, 0.5);
+  border-radius: 50rpx;
+}
+.cancel_btn{
+  position: absolute;
+  bottom: 2vh;
+  left:25rpx;
+  width: 320rpx;
+  height: 100rpx;
+  float: right;
+  line-height: 100rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 36rpx;
+  background-color: #f6d29e;
+  border-radius: 50rpx;
 }
 
 .befirst {
@@ -193,17 +231,16 @@ page {
   bottom:10vh;
   right: 50rpx;
   width: 100rpx;
-  z-index: 99;
 }
 
 
 .send_msg {
-  width: 750rpx;
+  width: 720rpx;
   background-color: #fff;
   height: 65vh;
   position: fixed;
   bottom: 8vh;
-  left: 0rpx;
+  left: 15rpx;
   border-radius: 30rpx;
   border-bottom: 1px solid #f1f1f1;
 }
@@ -228,26 +265,6 @@ page {
 
 .form-tit .must {
   color: red;
-}
-
-.form-ipt {
-  color: #333;
-}
-
-.form-ipt .ipt {
-  height: 60rpx;
-  padding: 10rpx 20rpx;
-  line-height: 60rpx;
-  background-color: #f8f8f8;
-  border-radius: 5rpx;
-}
-
-.form-ipt .textarea {
-  height: 180rpx;
-  padding: 20rpx;
-  line-height: 60rpx;
-  background-color: #f8f8f8;
-  margin-bottom: 20rpx;
 }
 
 .radio-group {

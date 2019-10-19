@@ -32,38 +32,37 @@ Page({
     })
 
     var that = this
-    // wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”
-    //   title: '加载中',
-    //   icon: 'loading',
-    // });
-    // wx.request({
-    //   url: api.host,
-    //   method: 'GET',
-    //   data: {
-    //   },
-    //   header: {
-    //     'Accept': 'application/json'
-    //   },
-    //   success: function(res) {
-    //     // console.log(res.data)
-    //     wx.hideLoading();
-    //     wx.playBackgroundAudio({
-    //       dataUrl: res.data.music,
-    //       title: '',
-    //       coverImgUrl: ''
-    //     })
-    //     wx.setStorage({
-    //       key: 'main',
-    //       data: res.data,
-    //     })
-    //
-    //     that.setData({
-    //       mainInfo: res.data,
-    //       music_url: res.data.music
-    //     });
-    //   }
-    // })
-    //
+    wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”
+      title: '加载中',
+      icon: 'loading',
+    });
+    wx.request({
+      url: api.getMusic,
+      method: 'GET',
+      data: {
+      },
+      header: {
+        'Accept': 'application/json'
+      },
+      success: function(res) {
+        // console.log(res.data)
+        wx.hideLoading();
+        wx.playBackgroundAudio({
+          dataUrl: res.data.data,
+          title: '',
+          coverImgUrl: ''
+        })
+        wx.setStorage({
+          key: 'main',
+          data: res.data,
+        })
+    
+        that.setData({
+          music_url: res.data.data
+        });
+      }
+    })
+    
 
     //
     // if (app.globalData.userInfo) {
@@ -111,5 +110,22 @@ Page({
     wx.makePhoneCall({
       phoneNumber: this.data.shetel
     })
+  },
+  play: function (event) {
+    if (this.data.isPlayingMusic) {
+      wx.pauseBackgroundAudio();
+      this.setData({
+        isPlayingMusic: false
+      })
+    } else {
+      wx.playBackgroundAudio({
+        dataUrl: this.data.music_url,
+        title: '',
+        coverImgUrl: ''
+      })
+      this.setData({
+        isPlayingMusic: true
+      })
+    }
   },
 })
