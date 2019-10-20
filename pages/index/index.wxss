@@ -4,10 +4,10 @@
 
 .xi{
   position: absolute;
-  width: 550rpx;
-  height: 550rpx;
-  bottom: 46vh;
-  left: 100rpx;
+  width: 500rpx;
+  height: 500rpx;
+  bottom: 49vh;
+  left: 125rpx;
   z-index: 99;
 }
 .love{
@@ -15,7 +15,7 @@
   width: 46rpx;
   height: 46rpx;
   left:352rpx;
-  bottom:40vh;
+  bottom:41vh;
   z-index: 99;
 }
 .we {
@@ -46,7 +46,7 @@
 .he{
   position: absolute;
   left: 170rpx;
-  bottom: 34vh;
+  bottom: 36vh;
   width: 140rpx;
   height: 158rpx;
   display: flex;
@@ -58,7 +58,7 @@
 .she{
 position: absolute;
   right: 170rpx;
-  bottom: 34vh;
+  bottom: 36vh;
   width: 140rpx;
   height: 158rpx;
   display: flex;
@@ -69,30 +69,34 @@ position: absolute;
 }
 .invtArea{
   position: absolute;
-  left:100rpx;
-  bottom:15vw;
-  width:550rpx;
-  height: 20vh;
+  left:75rpx;
+  bottom:7vh;
+  width:600rpx;
+  height: 28vh;
 }
 .invt {
   position: absolute;
   margin-left: 35rpx;
   margin-top: 35rpx;
-  color:white;
-  font-size: 75%;
+  color:#ffe4bc;
+  font-size: 90%;
   line-height: 170%;
   font-family: "Microsoft YaHei";
+  font-weight:300;
+  
 }
 .msgbody{
   position: absolute;
-  margin-top: 75rpx;
+  margin-top: 90rpx;
   margin-left: 35rpx;
   margin-right: 35rpx;
-  line-height: 170%;
-  color:white;
-  font-size: 75%;
+  line-height: 178%;
+  color:#ffe4bc;
+  font-size: 90%;
+  text-align: justify;
   text-indent:2em;
   font-family: "Microsoft YaHei";
+  font-weight:300
 }
 
 .background_music {

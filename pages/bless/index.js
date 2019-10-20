@@ -124,7 +124,7 @@ Page({
   foo: function() {
     var that = this
     console.log(2, that.data.inputValue)
-    if (that.data.inputValue) {
+    if (that.data.come || that.data.inputValue) {
       //留言内容不是空值
 
       var userInfo = that.data.userInfo;

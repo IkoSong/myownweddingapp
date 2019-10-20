@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class="swiper">
-    <swiper indicator-dots="true" indicator-active-color="rgb(245, 212, 158)" interval="2000" duration="500" autoplay="true" :vertical="false" circular="true">
+    <swiper indicator-dots="true" indicator-active-color="rgb(245, 212, 158)" interval="3500" duration="500" autoplay="true" :vertical="false" circular="true">
       <!-- <swiper-item wx:for="{{slideList}}" wx:key="slide" wx:id="id" wx:if="{{item.image}}">
         <image src="{{item.image}}" class="slide-image" mode="aspectFill" />
       </swiper-item> -->
