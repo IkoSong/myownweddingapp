@@ -22,6 +22,8 @@
         <view class="call">呼叫新郎</view>
         <view class="name">宋林晖</view>
     </view>
+    <image src="/images/index/jiuhu.png"class="jiuhu"></image>
+    <image src="/images/index/shanzi.png"class="shanzi"></image>
     <view class="she" bindtap="callshe">
         <image src='/images/index/she.png' class="callimg"></image>
         <view class="call">呼叫新娘</view>

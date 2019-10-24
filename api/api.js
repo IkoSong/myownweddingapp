@@ -1,9 +1,11 @@
-// const host = 'http://192.168.0.109/wedding'
-const host = 'http://122.51.5.55/wedding'
-const photo = host + '/getPhotos'
-const getbless = host + '/getBless'
-const sendbless = host + '/sendBless'
-const getMusic = host + '/getMusicUrl'
+// const host = 'http://192.168.0.109:1002'
+const host = 'https://shizihuihui.cn'
+const photo = host + '/wedding/getPhotos'
+const getbless = host + '/wedding/getBless'
+const sendbless = host + '/wedding/sendBless'
+const getMusic = host + '/wedding/getMusicUrl'
+const loginWX = host +'/wechatApi/login'
+
 module.exports = {
-  host, photo, getbless,sendbless,getMusic
+  host, photo, getbless,sendbless,getMusic,loginWX
 }

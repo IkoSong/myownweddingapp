@@ -10,6 +10,7 @@ Page({
    */
   data: {
     userInfo: {},
+    openId:'',
     inputValue: '',
     name: '',
     tel: '',
@@ -26,10 +27,12 @@ Page({
   onLoad: function(options) {
     var that = this
     let userInfo = wx.getStorageSync('userInfo')
-    if (userInfo) {
+    let openId = wx.getStorageSync('openId')
+    if (userInfo && openId) {
       this.setData({
         auth: true,
-        userInfo: userInfo
+        userInfo: userInfo,
+        openId:openId
       })
     }
     wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”
@@ -99,18 +102,70 @@ Page({
       tel: e.detail.value
     })
   },
-
+  onPullDownRefresh: function () {
+    wx.showToast({
+      title: '正在刷新数据...',
+      icon: 'loading',
+      duration: 2000
+    });
+    this.onLoad();//再重新加载数据
+    wx: wx.stopPullDownRefresh();//停止刷新操作
+  },
 
   bindgetuserinfo: function(e) {
     console.log(e.detail.userInfo)
     var that = this;
-    if (e.detail.userInfo) {
-      wx.setStorageSync('userInfo', e.detail.userInfo)
+    let openId = wx.getStorageSync('openId')
+    let userInfo = e.detail.userInfo
+    if (userInfo) {
+      if (!openId){
+        wx.login({
+          success: function (res) {
+            var code = res.code;//登录凭证
+            if (code) {
+              //2、调用获取用户信息接口
+              console.log({ encryptedData: e.detail.encryptedData, iv: e.detail.iv, code: code })
+                  //3.请求自己的服务器，解密用户信息 获取unionId等加密信息
+                  wx.request({
+                    url: api.loginWX,//自己的服务接口地址
+                    method: 'get',
+                    header: {
+                      "Content-Type": "applciation/json"
+                    },
+                    data: { encryptedData: e.detail.encryptedData, iv: e.detail.iv, code: code },
+                    success: function (data) {
+                      //4.解密成功后 获取自己服务器返回的结果
+                      if (data.data.status == 1) {
+                        openId = data.data.userInfo.openId
+                        that.setData({
+                          openId: openId,
+                          auth: true
+                        })
+                        wx.setStorageSync('openId', openId)
+                      } else {
+                        console.log('解密失败')
+                      }
+                    },
+                    fail: function () {
+                      console.log('系统错误')
+                    }
+                  })
+             
+            } else {
+              console.log('获取用户登录态失败！' + r.errMsg)
+            }
+          },
+          fail: function () {
+            console.log('登陆失败')
+          }
+        })
+      }
+      wx.setStorageSync('userInfo', userInfo)
       that.setData({
-        userInfo: e.detail.userInfo,
-        auth: true
+        userInfo: userInfo
+       
       })
-      console.log(1, e.detail.userInfo)
+      console.log(1, userInfo)
       //that.foo()
 
     } else {
@@ -121,18 +176,21 @@ Page({
       });
     }
   },
-  foo: function() {
+  foo: function(e) {
     var that = this
+    var formId = e.detail.formId
+
     console.log(2, that.data.inputValue)
     if (that.data.come || that.data.inputValue) {
       //留言内容不是空值
-
       var userInfo = that.data.userInfo;
       var name = userInfo.nickName;
       var face = userInfo.avatarUrl;
       var words = that.data.inputValue;
-      var realName = this.data.name;
-      var come = this.data.come;
+      var realName = that.data.name;
+
+      var openId = that.data.openId;
+      var come = that.data.come;
       if (come && realName == '') {
         wx.showToast({
           title: '请填写您的姓名',
@@ -170,7 +228,10 @@ Page({
           return;
         }
       }
-
+      wx.showLoading({ //期间为了显示效果可以添加一个过度的弹出框提示“加载中”
+        title: '加载中',
+        icon: 'loading',
+      });
       wx.request({
         url: api.sendbless,
         data: {
@@ -180,13 +241,16 @@ Page({
           'realName':realName,
           'tel':tel,
           'num':num,
-          'isCome':come
+          'isCome':come,
+          'openId':openId,
+          'formId':formId
         },
         header: {},
         method: "POST",
         dataType: "json",
         success: res => {
           console.log(res.data);
+          wx.hideLoading();
           if (res.data.code == 0) {
             that.setData({
               chatList: res.data.data,

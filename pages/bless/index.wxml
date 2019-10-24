@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
- <image src='/images/index/di.png' class='cover' mode='aspectFill'></image>
+ <image src='/images/bless/di.png' class='cover' mode='aspectFill'></image>
     <view wx:if="{{chatNum > 0}}">
       <view class="chat_list" wx:for="{{chatList}}" wx:key="user">
         <view class="chat_face">
@@ -28,7 +28,7 @@
     </view>
 
     <view class="send_msg" wx:if="{{msgSta}}">
-      <form bindsubmit="foo">
+      <form bindsubmit="foo" report-submit="true">
       <image src="/images/bless/huapao.png" class="imgarea" wx:if="{{!come}}"></image>
       <view class="comebtn"  wx:if="{{!come}}" bindtap="comeWedding"><view class="comebtn_son"><text>如果您有时间出席我们的婚礼\n请点击此按钮填写相关信息</text></view>
       <image src="/images/bless/jiantou.png" class="arrowimg"></image>
@@ -36,7 +36,7 @@
       <input class="name_ipt" wx:if="{{come}}" placeholder=" 请填写您的姓名" bindinput="nameInput" value="{{name}}"></input>
        <input class="tel_ipt" wx:if="{{come}}" type="number" placeholder=" 请填写您的手机号码" bindinput="telInput" value="{{tel}}"></input>
       <input class="num_ipt" wx:if="{{come}}" placeholder=" 请填写您的出席人数(无法前来可填0)" bindinput="numInput" value="{{num}}"></input>
-    
+
      <view wx:if="{{come}}" class="splitline">
     <span>以上信息均为后台统计，不会呈现在页面中</span>
     </view>

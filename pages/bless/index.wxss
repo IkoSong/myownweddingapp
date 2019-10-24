@@ -49,13 +49,14 @@ page {
   display: inline-block;
   font-size: 30rpx;
   font-weight: 600;
-  color: #666;
+  color: #c10538;
 }
 
 .chat_date {
-  display: inline-block;
+  display: block;
   font-size: 24rpx;
   color: #ccc;
+  float: right;
 }
 
 .splitline{

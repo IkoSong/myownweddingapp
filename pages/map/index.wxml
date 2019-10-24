@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container">
-  <image src='/images/index/di.png' class='cover' mode='aspectFill'></image>
+  <image src='/images/map/di.png' class='cover' mode='aspectFill'></image>
   <view class='dateArea'>
   <image src="/images/map/riqi.png" class="date"></image>
   </view>

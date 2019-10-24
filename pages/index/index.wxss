@@ -55,6 +55,14 @@
   justify-content: center;
   z-index: 99;
 }
+.jiuhu{
+   position: absolute;
+  left: 50rpx;
+  bottom: 37vh;
+  width: 154rpx;
+  height: 148rpx;
+   z-index: 98;
+}
 .she{
 position: absolute;
   right: 170rpx;
@@ -66,6 +74,14 @@ position: absolute;
   flex-wrap: wrap;
   justify-content: center;
   z-index: 99;
+}
+.shanzi{
+  position: absolute;
+  right: 25rpx;
+  bottom: 37.5vh;
+  width: 223rpx;
+  height: 136rpx;
+  z-index: 98;
 }
 .invtArea{
   position: absolute;
