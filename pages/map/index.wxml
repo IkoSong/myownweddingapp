@@ -1,13 +1,15 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <image src='/images/map/di.png' class='cover' mode='aspectFill'></image>
+  <view class='dateArea'>
+  <image src="/images/map/riqi.png" class="date"></image>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="mapArea">
+  <image src="/images/map/didian.png" class="locat"></image>
+  <view class="redtop"></view>
+  <!-- <view class="mapdetail"> -->
+  <map class="mapdetail" longitude="{{lng}}" latitude="{{lat}}" scale="18" controls="{{controls}}" markers="{{markers}}" bindmarkertap="markertap" show-location ></map>
+  <!-- </view> -->
+  <view class="redbottom"></view>
   </view>
 </view>

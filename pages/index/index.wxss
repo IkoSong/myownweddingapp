@@ -1,15 +1,183 @@
-.cover {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 750rpx;
-  height: 100vh;
+.container {
+  min-height: 100vh;
 }
-.inv {
-  width: 572rpx;
-  height: 69rpx;
-  position: fixed;
-  top: 30rpx;
-  left: 89rpx;
+
+.xi{
+  position: absolute;
+  width: 500rpx;
+  height: 500rpx;
+  bottom: 49vh;
+  left: 125rpx;
   z-index: 99;
+}
+.love{
+  position: absolute;
+  width: 46rpx;
+  height: 46rpx;
+  left:352rpx;
+  bottom:41vh;
+  z-index: 99;
+}
+.we {
+  position: absolute;
+  left: 40rpx;
+  width: 520rpx;
+  height: 400rpx;
+  z-index: 99;
+}
+.callimg{
+  width: 85rpx;
+  height: 85rpx;
+}
+.call{
+  position: absolute;
+  bottom:60rpx; 
+  color:rgb(245, 212, 158);
+  letter-spacing: 6rpx;
+  font-size: 70%;
+  font-family: "Microsoft YaHei"
+}
+.name{
+  color:rgb(245, 212, 158);
+  letter-spacing: 8rpx;
+  font-size: 100%;
+  font-family: "Microsoft YaHei"
+}
+.he{
+  position: absolute;
+  left: 170rpx;
+  bottom: 36vh;
+  width: 140rpx;
+  height: 158rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 99;
+}
+.jiuhu{
+   position: absolute;
+  left: 50rpx;
+  bottom: 37vh;
+  width: 154rpx;
+  height: 148rpx;
+   z-index: 98;
+}
+.she{
+position: absolute;
+  right: 170rpx;
+  bottom: 36vh;
+  width: 140rpx;
+  height: 158rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 99;
+}
+.shanzi{
+  position: absolute;
+  right: 25rpx;
+  bottom: 37.5vh;
+  width: 223rpx;
+  height: 136rpx;
+  z-index: 98;
+}
+.invtArea{
+  position: absolute;
+  left:75rpx;
+  bottom:7vh;
+  width:600rpx;
+  height: 28vh;
+}
+.invt {
+  position: absolute;
+  margin-left: 35rpx;
+  margin-top: 35rpx;
+  color:#ffe4bc;
+  font-size: 90%;
+  line-height: 170%;
+  font-family: "Microsoft YaHei";
+  font-weight:300;
+  
+}
+.msgbody{
+  position: absolute;
+  margin-top: 90rpx;
+  margin-left: 35rpx;
+  margin-right: 35rpx;
+  line-height: 178%;
+  color:#ffe4bc;
+  font-size: 90%;
+  text-align: justify;
+  text-indent:2em;
+  font-family: "Microsoft YaHei";
+  font-weight:300
+}
+
+.background_music {
+  position: fixed;
+  top: 20rpx;
+  right: 0;
+  z-index: 10001;
+  width: 100rpx;
+}
+.musicImg {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.music_icon {
+  animation: musicRotate 3s linear infinite;
+}
+
+.music_play {
+  width: 28rpx;
+  height: 60rpx;
+  margin-left: -5px;
+  transform-origin: top;
+  -webkit-transform: rotate(20deg);
+}
+
+.playImg {
+  animation: musicStop 1s linear forwards;
+}
+
+.pauseImg {
+  animation: musicStart 1s linear forwards;
+}
+
+@-webkit-keyframes musicRotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes musicStop {
+  from {
+    -webkit-transform: rotate(20deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes musicStart {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(20deg);
+  }
+}
+
+.music_stop {
+  width: 4em;
+  display: none;
 }

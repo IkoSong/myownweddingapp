@@ -10,38 +10,37 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  markertap(e) {
+    var lng = "121.291900"
+    var lat = "29.693090"
+    wx.openLocation({
+      latitude: parseFloat(lat),
+      longitude: parseFloat(lng),
+      scale: 18,
+      name: "溪口龙飞大酒店",
+      address: "浙江省宁波市奉化区溪口镇中兴东路563号 "
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
+    var that = this
+    //地图信息
+    var lng = "121.291900"
+    var lat = "29.693090"
+
+    // var lng = res.data.mainInfo.lng
+    // var lat = res.data.mainInfo.lat
+    that.setData({
+      lng: lng, // 全局属性，用来取定位坐标
+      lat: lat,
+      markers: [{
+        iconPath: "/images/map/location.png",
+        id: 0,
+        latitude: lat, // 页面初始化 options为页面跳转所带来的参数 
+        longitude: lng,
+        width: 22,
+        height: 31
+      }],
+    });
   },
   getUserInfo: function(e) {
     console.log(e)

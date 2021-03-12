@@ -1,13 +1,53 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+ <image src='/images/bless/di.png' class='cover' mode='aspectFill'></image>
+    <view wx:if="{{chatNum > 0}}">
+      <view class="chat_list" wx:for="{{chatList}}" wx:key="user">
+        <view class="chat_face">
+          <image src="{{item.face}}" />
+        </view>
+        <view class="chat_words">
+          <view class="chat_meta">
+            <text class="chat_user">{{item.nickname}} </text>
+            <text class="chat_date fr">{{item.createTime}}</text>
+          </view>
+          <view>{{item.words}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class="befirst">
+        <!-- <image src="/images/lovemail.gif" /> -->
+      </view>
+    </view>
+    <view class='btn_area'>
+      <image wx:if="{{!msgSta}}" src='/images/bless/bi.png' class="imgbtn" bindtap="leaveMsg"></image>
+      <!-- <view class='msg_btn' bindtap='leaveMsg'>说</view> -->
+      <!-- <image src="/images/bless/bi.png" class="msg_btn"></image> -->
+      <!-- <view class='sign_btn' bindtap='signIn'>席</view> -->
+    </view>
+
+    <view class="send_msg" wx:if="{{msgSta}}">
+      <form bindsubmit="foo" report-submit="true">
+      <image src="/images/bless/huapao.png" class="imgarea" wx:if="{{!come}}"></image>
+      <view class="comebtn"  wx:if="{{!come}}" bindtap="comeWedding"><view class="comebtn_son"><text>如果您有时间出席我们的婚礼\n请点击此按钮填写相关信息</text></view>
+      <image src="/images/bless/jiantou.png" class="arrowimg"></image>
+      </view>
+      <input class="name_ipt" wx:if="{{come}}" placeholder=" 请填写您的姓名" bindinput="nameInput" value="{{name}}"></input>
+       <input class="tel_ipt" wx:if="{{come}}" type="number" placeholder=" 请填写您的手机号码" bindinput="telInput" value="{{tel}}"></input>
+      <input class="num_ipt" wx:if="{{come}}" placeholder=" 请填写您的出席人数(无法前来可填0)" bindinput="numInput" value="{{num}}"></input>
+
+     <view wx:if="{{come}}" class="splitline">
+    <span>以上信息均为后台统计，不会呈现在页面中</span>
+    </view>
+    <view wx:else class="splitline">
+    <span>献上祝福</span>
+    </view>
+      <textarea placeholder=" 在这里输入您要说的话" class="send_ipt" bindinput="bindKeyInput" fixed="true" value="{{inputValue}}">
+      </textarea>
+        <button type="warn" form-type="submit" class="send_btn" wx:if="{{auth}}">发送</button>
+        <button type="warn" class="send_btn" wx:else open-type="getUserInfo" bindgetuserinfo="bindgetuserinfo">发送</button>
+        <view   class="cancel_btn" bindtap="cancelMsg">取消</view>
+      </form>
+    </view>
 </view>
